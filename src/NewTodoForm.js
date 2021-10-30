@@ -12,7 +12,7 @@ class NewToDoForm extends Component {
   handleSubmit(evt){
     evt.preventDefault();
     // createTodo is the variable name we gave our create function from TodoList that we passed when we called newTodoForm component.
-    this.props.createTodo({...this.state, id: uuidv4()});
+    this.props.createTodo({...this.state, id: uuidv4(), completed: false});
     this.setState({ task: ""});
 
   }
