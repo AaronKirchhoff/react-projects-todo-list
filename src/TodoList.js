@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import NewToDoForm from './NewTodoForm';
 import Todo from './Todo';
+import './TodoList.css'
 
 class TodoList extends Component {
   constructor(props){
@@ -50,10 +51,11 @@ class TodoList extends Component {
       return <Todo key={todo.id} task={todo.task} id={todo.id} removeTodo={this.remove} updateTodo={this.update} completed={todo.completed} toggleTodo={this.toggleCompletion}/>
     })
     return (
-      <div>
-        <h1>Dune To Do List!</h1>
-        <NewToDoForm createTodo={this.create}/>
+      <div className="TodoList">
+        <h1>Dune To Do List!<span>Hello subtitile dune</span></h1>
         <ul>{todos}</ul>
+        <NewToDoForm createTodo={this.create}/>
+
       </div>
     )
 
